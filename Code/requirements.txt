@@ -1,0 +1,61 @@
+
+---
+
+##  Features
+
+-  Fully self-contained **single-file** implementation (`doatas.py`)
+-  Works **out-of-the-box** with a built-in synthetic NTN dataset
+-  Supports **custom CSV input** via `DATA_PATH`
+-  Compares **DO-ATAS vs. baseline ATAS** side by side
+-  Prints **all 11 evaluation metrics** from the paper outline
+-  Auto-generates a **4-panel visualization** of results
+-  Deterministic runs via fixed `SEED = 42`
+-  Zero external dependencies beyond `numpy`, `pandas`, `matplotlib`
+
+---
+
+##  Evaluation Metrics
+
+The framework reports every metric described in the research outline:
+
+| # | Metric | Unit | Direction |
+|---|---|---|---|
+| 1 | Handover Delay (avg / total) | ms | ↓ lower is better |
+| 2 | Throughput | Mbps | ↑ higher is better |
+| 3 | Packet Loss Ratio | % | ↓ lower is better |
+| 4 | RSS (Received Signal Strength) | dBm | ↑ higher is better |
+| 5 | SNR (Signal-to-Noise Ratio) | dB | ↑ higher is better |
+| 6 | Handover Success Rate | % | ↑ higher is better |
+| 7 | Ping-Pong Rate | % | ↓ lower is better |
+| 8 | Latency | ms | ↓ lower is better |
+| 9 | QoS Score | [0–1] | ↑ higher is better |
+| 10 | Network Stability | [0–1] | ↑ higher is better |
+| 11 | Communication Reliability | [0–1] | ↑ higher is better |
+
+---
+
+##  Requirements
+
+- Python ≥ 3.8
+- numpy
+- pandas
+- matplotlib
+
+See `requirements.txt` for pinned versions.
+
+---
+
+##  Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/do-atas-6g-ntn.git
+cd do-atas-6g-ntn
+
+# (Optional but recommended) Create a virtual environment
+python -m venv venv
+source venv/bin/activate           # Linux / macOS
+# venv\Scripts\activate            # Windows
+
+# Install dependencies
+pip install -r requirements.txt
