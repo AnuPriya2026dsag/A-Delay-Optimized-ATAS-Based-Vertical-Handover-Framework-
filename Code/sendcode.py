@@ -1,20 +1,3 @@
-"""
-================================================================================
- DO-ATAS: Delay-Optimized Adaptive Threshold-Assisted Selection Framework
- for Vertical Handover in 6G Non-Terrestrial Networks (NTNs)
-================================================================================
- Single-script, fully self-contained implementation.
-
- Requirements: numpy, pandas, matplotlib
- Install:      pip install numpy pandas matplotlib
-
- INPUT:
-   - Set DATA_PATH = "your_dataset.csv" to load a CSV with columns:
-       t, layer, rss, snr, throughput, latency, velocity, elevation, packet_loss
-     where 'layer' is one of: Terrestrial, HAPS, LEO
-   - Set DATA_PATH = None to use the built-in synthetic generator.
-================================================================================
-"""
 
 import os
 import numpy as np
@@ -28,11 +11,8 @@ from collections import deque
 SEED = 42
 np.random.seed(SEED)
 
-# ------------------------------------------------------------------
-# >>> INPUT PATH <<<
-# Set to a CSV path to load a custom dataset, or None for synthetic.
-# ------------------------------------------------------------------
-DATA_PATH = None            # e.g. DATA_PATH = "data/ntn_handover.csv"
+
+DATA_PATH = None            #  DATA_PATH = "data/ntn_handover.csv"
 
 # Output directory for plots
 OUTPUT_DIR = "."
